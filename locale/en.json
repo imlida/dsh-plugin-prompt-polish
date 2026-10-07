@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Prompt Polish",
+    "description": "Adds a polish button at the bottom-right of the composer: one click rewrites your draft with the model, and the polish instructions stay editable."
+  }
+}

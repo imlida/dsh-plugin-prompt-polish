@@ -1,0 +1,13 @@
+# 依赖与构建产物（本插件本身零依赖，这里是兜底）
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+
+# 运行期数据（如果被指到仓库内）
+data/
+
+# 系统 / 编辑器杂项
+.DS_Store
+*.log
+.idea/
+.vscode/

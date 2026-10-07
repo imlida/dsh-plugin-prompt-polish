@@ -1,0 +1,17 @@
+# 本插件包的组合层：把「提示词润色」这一条 Host 插件加进 profile。
+#
+# 说明：
+# - id 稳定不变（`prompt-polish`），Settings 服务按这个 id 保存配置。
+# - name 指向包内的 `./host` 子路径导出（Host 半实现）。
+# - config 里的字段是可选覆盖项；即使全部留空，插件也会用内置默认值工作。
+#   真正「润色用的提示词」由插件在设置面板里保存，不依赖这里。
+- insert:
+    - id: prompt-polish
+      name: 'dsh-plugin-prompt-polish'
+      config:
+        # 可选：临时换一个更快的模型来润色（不填就用当前默认模型）。
+        # provider: deepseek-account
+        # model: deepseek-flash
+        # reasoningEffort: low
+        # temperature: 0.3
+        # maxTokens: 2048

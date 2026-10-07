@@ -1,0 +1,59 @@
+{
+  "name": "dsh-plugin-prompt-polish",
+  "version": "1.0.0",
+  "description": "在提示词输入框右下角添加「润色」按钮，一键让模型改写草稿；润色用的提示词可在界面上随时修改。",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "prompt"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "main": "lib/host.mjs",
+  "exports": {
+    ".": {
+      "default": "./lib/host.mjs"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "icon.svg",
+    "lib/host.mjs",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "README.md",
+    "LICENSE",
+    "test"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "author": "imlida",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imlida/dsh-plugin-prompt-polish.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imlida/dsh-plugin-prompt-polish/issues"
+  },
+  "homepage": "https://github.com/imlida/dsh-plugin-prompt-polish#readme"
+}
